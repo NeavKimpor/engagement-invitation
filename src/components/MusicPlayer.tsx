@@ -64,6 +64,7 @@ function MusicPlayer() {
     const tryPlay = () => {
       const audio = audioRef.current;
       if (audio) {
+        // Attempt to play audio while muted
         const playPromise = audio.play();
         if (playPromise !== undefined) {
           playPromise
@@ -94,6 +95,7 @@ function MusicPlayer() {
       audio.play().then(() => {
         setIsPlaying(true);
         setIsMuted(false); // Unmute when the user clicks the play button
+        audio.volume = 1; // Ensure the volume is at 100% (full volume)
       });
     }
   };
