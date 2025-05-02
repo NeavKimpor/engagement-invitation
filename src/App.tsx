@@ -18,7 +18,7 @@ function App() {
 
   return (
     <>
-
+    
     <Routes>
       <Route path="/" element={<Opening/>}/>
       <Route path='/invitation' element={<Invitation/>}/>
