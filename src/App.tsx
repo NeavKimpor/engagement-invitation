@@ -2,7 +2,6 @@ import { Link, Navigate, Route, Routes, useLocation, useNavigate } from "react-r
 import Opening from './pages/Opening';
 import Invitation from "./pages/Invitation";
 import { useEffect } from "react";
-import MusicPlayer from "./components/MusicPlayer";
 
 
 function App() {
@@ -20,8 +19,6 @@ function App() {
   return (
     <>
 
-    <MusicPlayer/>
-    
     <Routes>
       <Route path="/" element={<Opening/>}/>
       <Route path='/invitation' element={<Invitation/>}/>

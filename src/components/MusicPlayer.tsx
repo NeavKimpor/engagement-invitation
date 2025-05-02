@@ -1,55 +1,55 @@
-// import { useEffect, useRef, useState } from "react";
-// import { Play, Pause } from "lucide-react";
-// import Song from "../assets/mp3/Olica - (First Step) Olica & Vithyeas wedding song (Prod. by NICK IT).mp3"
+import { useEffect, useRef, useState } from "react";
+import { Play, Pause } from "lucide-react";
+import Song from "../assets/mp3/Olica - (First Step) Olica & Vithyeas wedding song (Prod. by NICK IT).mp3"
 
-// function MusicPlayer() {
-//     const audioRef = useRef<HTMLAudioElement>(null);
-//     const [isPlaying, setIsPlaying] = useState(false);
+function MusicPlayer() {
+    const audioRef = useRef<HTMLAudioElement>(null);
+    const [isPlaying, setIsPlaying] = useState(false);
 
-//     useEffect(() => {
-//     const tryPlay = () => {
-//         const audio = audioRef.current;
-//         if (audio) {
-//             const playPromise = audio.play();
-//             if (playPromise !== undefined) {
-//             playPromise
-//                 .then(() => setIsPlaying(true))
-//                 .catch(() => setIsPlaying(false));
-//             }
-//         }
-//     };
+    useEffect(() => {
+    const tryPlay = () => {
+        const audio = audioRef.current;
+        if (audio) {
+            const playPromise = audio.play();
+            if (playPromise !== undefined) {
+            playPromise
+                .then(() => setIsPlaying(true))
+                .catch(() => setIsPlaying(false));
+            }
+        }
+    };
 
-//     tryPlay();
-//     }, []);
+    tryPlay();
+    }, []);
 
-//     const toggleMusic = () => {
-//     const audio = audioRef.current;
-//     if (!audio) return;
+    const toggleMusic = () => {
+    const audio = audioRef.current;
+    if (!audio) return;
 
-//     if (isPlaying) {
-//         audio.pause();
-//         setIsPlaying(false);
-//         } else {
-//         audio.play().then(() => setIsPlaying(true));
-//         }
-//     };
+    if (isPlaying) {
+        audio.pause();
+        setIsPlaying(false);
+        } else {
+        audio.play().then(() => setIsPlaying(true));
+        }
+    };
 
-//     return (
-//         <div className="fixed bottom-4 right-4 z-50">
-//         <audio ref={audioRef} src={Song} loop preload="auto" />
-//         <button
-//             onClick={toggleMusic}
-//             className="bg-sand text-white p-2 rounded-full shadow transition"
-//         >
-//             <div className={`${isPlaying ? "animate-spin-slow" : ""}`}>
-//             {isPlaying ? <Pause size={24} /> : <Play size={24} />}
-//             </div>
-//         </button>
-//         </div>
-//     );
-// }
+    return (
+        <div className="fixed bottom-4 right-4 z-50">
+        <audio ref={audioRef} src={Song} loop preload="auto" />
+        <button
+            onClick={toggleMusic}
+            className="bg-sand text-white p-2 rounded-full shadow transition"
+        >
+            <div className={`${isPlaying ? "animate-spin-slow" : ""}`}>
+            {isPlaying ? <Pause size={24} /> : <Play size={24} />}
+            </div>
+        </button>
+        </div>
+    );
+}
 
-// export default MusicPlayer;
+export default MusicPlayer;
 
 // import { useEffect, useRef, useState } from "react";
 // import { Play, Pause } from "lucide-react";
@@ -118,64 +118,3 @@
 
 // export default MusicPlayer;
 
-import { useEffect, useRef, useState } from "react";
-import { Play, Pause } from "lucide-react";
-import Song from "../assets/mp3/Olica - (First Step) Olica & Vithyeas wedding song (Prod. by NICK IT).mp3";
-
-function MusicPlayer() {
-  const audioRef = useRef<HTMLAudioElement>(null);
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [isMuted, setIsMuted] = useState(true);
-
-  useEffect(() => {
-    const audio = audioRef.current;
-    if (audio) {
-      // Try to play the audio muted automatically
-      const playPromise = audio.play();
-      if (playPromise !== undefined) {
-        playPromise
-          .then(() => {
-            setIsPlaying(true); // Audio started playing
-            console.log("Autoplay started successfully (muted)");
-          })
-          .catch((error) => {
-            console.error("Autoplay blocked:", error);
-            setIsPlaying(false);
-          });
-      }
-    }
-  }, []); // Try autoplay when the component mounts
-
-  const toggleMusic = () => {
-    const audio = audioRef.current;
-    if (!audio) return;
-
-    if (isPlaying) {
-      audio.pause();
-      setIsPlaying(false);
-    } else {
-      audio.play().then(() => {
-        setIsPlaying(true);
-        setIsMuted(false); // Unmute the audio after the user clicks the button
-        audio.volume = 1; // Set volume to 100%
-      });
-    }
-  };
-
-  return (
-    <div className="fixed bottom-4 right-4 z-50">
-      {/* Audio is initially muted for autoplay to work */}
-      <audio ref={audioRef} src={Song} loop preload="auto" muted={isMuted} />
-      <button
-        onClick={toggleMusic}
-        className="bg-sand text-white p-2 rounded-full shadow transition"
-      >
-        <div className={`${isPlaying ? "animate-spin-slow" : ""}`}>
-          {isPlaying ? <Pause size={24} /> : <Play size={24} />}
-        </div>
-      </button>
-    </div>
-  );
-}
-
-export default MusicPlayer;
