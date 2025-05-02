@@ -1,11 +1,13 @@
 import { Link } from "react-router-dom";
+import OpeningButton from "../components/OpeningButton";
+import "./Opening.css"
 
 function Opening() {
     return (
-        <div>
-            <li>
-                <Link to="/invitation">Go to Invitation</Link>
-            </li>
+        <div className="opening-page">
+            <h1 className="greeting">សូមគោរពអញ្ជើញ</h1>
+            <h1 className="title">សិរីមង្គលពិធីពិសាស្លាដក់កន្សែង</h1>
+            <OpeningButton/>
         </div>
     )
 }

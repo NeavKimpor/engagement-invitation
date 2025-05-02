@@ -1,0 +1,11 @@
+.open-button {
+    font-family: "Kantumruy Pro", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    background-color: #C6B48E;
+    color: #FEFAF3;
+    padding: 0.8em 1.5em;
+    font-size: 1.2rem;
+    border-radius: 2rem;
+}

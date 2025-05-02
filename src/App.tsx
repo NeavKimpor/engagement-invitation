@@ -14,7 +14,7 @@ function App() {
     if (location.pathname !== '/') {
       navigate('/');
     }
-  }, []);
+  }, [])
 
   return (
     <>
