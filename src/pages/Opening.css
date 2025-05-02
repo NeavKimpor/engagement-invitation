@@ -5,23 +5,11 @@
 body {
     margin: 0;
     padding: 0;
-    background-image: url(../assets/images/background-phone.webp);
+    background-image: url(../assets/images/background.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
-}
-
-body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100vw;
-    background-color: rgba(0, 0, 0, 0.5); /* black with 50% opacity */
-    z-index: -20;
-    pointer-events: none;
 }
 
 .sub-title {
