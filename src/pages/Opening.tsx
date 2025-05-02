@@ -1,5 +1,24 @@
+import { Link } from "react-router-dom";
+
 function Opening() {
-    return <h1 className="bg-pink-100 text-4xl">Opening Page</h1>
+    return (
+        <div>
+            <li>
+                <Link to="/invitation">Go to Invitation</Link>
+            </li>
+        </div>
+    )
 }
 
 export default Opening;
+
+{/* <nav>
+      <ul>
+        <li>
+          <Link to="/">Home</Link>
+        </li>
+        <li>
+          <Link to="/invitation">Invitation</Link>
+        </li>
+      </ul>
+    </nav> */}
