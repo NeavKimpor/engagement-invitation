@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import "./Invitation.css"
 
 function Invitation() {

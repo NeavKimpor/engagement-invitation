@@ -1,9 +1,7 @@
 import { Link } from "react-router-dom";
 import './OpeningButton.css'
-import flower1 from "../assets/images/flower1.png"
-import flower2 from "../assets/images/flower2.png"
-import flower3 from "../assets/images/flower3.png"
-import flower4 from "../assets/images/flower4.png"
+import flower1 from "../assets/images/flower1.webp"
+import flower3 from "../assets/images/flower3.webp"
 
 function OpeningButton() {
     return (

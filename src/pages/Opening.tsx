@@ -1,7 +1,6 @@
-import { Link } from "react-router-dom";
 import OpeningButton from "../components/OpeningButton";
 import "./Opening.css"
-import Logo from "../assets/images/logo.png"
+import Logo from "../assets/images/logo.webp"
 
 function Opening() {
     return (
