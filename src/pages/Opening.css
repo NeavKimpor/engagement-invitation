@@ -25,7 +25,7 @@ body::before {
     pointer-events: none;
 }
 
-.greeting {
+.sub-title {
     font-family: "Kantumruy Pro", sans-serif;
     font-optical-sizing: auto;
     font-weight: 500;

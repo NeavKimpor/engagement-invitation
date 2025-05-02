@@ -5,7 +5,7 @@ import "./Opening.css"
 function Opening() {
     return (
         <div className="opening-page flex flex-col items-center">
-            <h1 className="greeting">សូមគោរពអញ្ជើញ</h1>
+            <h1 className="sub-title">សូមគោរពអញ្ជើញ</h1>
             <h1 className="title">សិរីមង្គលពិធីពិសាស្លាដក់កន្សែង</h1>
             <OpeningButton/>
         </div>
