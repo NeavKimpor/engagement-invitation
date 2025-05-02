@@ -1,4 +1,4 @@
-import { Link, Navigate, Route, Routes, useLocation, useNavigate } from "react-router-dom";
+import { Navigate, Route, Routes, useLocation, useNavigate } from "react-router-dom";
 import Opening from './pages/Opening';
 import Invitation from "./pages/Invitation";
 import { useEffect } from "react";
