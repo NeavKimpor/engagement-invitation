@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import './openingButton.css'
+import './OpeningButton.css'
 
 function OpeningButton() {
     return (
